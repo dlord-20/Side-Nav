@@ -10,7 +10,9 @@ header {
     z-index: 1000;
 }
 
-.nav-checkbox, .nav-extend {
+.nav-checkbox, 
+.nav-extend i
+{
     position: absolute;
     color: #dee7ef;
     top: 75px;
@@ -25,10 +27,9 @@ header {
 .nav-checkbox {
     opacity: 0;
     transition: all 1s ease-in-out;
-
 }
 
-.nav-extend {
+.nav-extend i{
     pointer-events: none;
     display: flex;
     text-align: center;
@@ -38,15 +39,35 @@ header {
     transition: all 1s ease-in-out;
 }
 
+.nav-extend p {
+    position: absolute;
+    color: white;
+    z-index: 5;
+    opacity: 0;
+    margin-top: 105px;
+    margin-left: 73px;
+    transition: all 1s ease-in-out;
+}
+
+.nav-checkbox:checked ~ .nav-extend p {
+    opacity: 1;
+}
+
 .nav-checkbox:checked ~ .nav-container {
     width: 200px;
 }
 
-.nav-checkbox:checked ~ .nav-extend,
+.nav-checkbox:checked {
+    width: 200px;
+    /* margin-left: 50px !important; */
+}
+
+
+.nav-checkbox:checked ~ .nav-extend i,
 .nav-checkbox:checked
 {
     transform: rotate(180deg);
-    margin-left: 125px;
+    /* margin-left: 125px; */
 }
 
 .nav-checkbox:checked ~ div .nav-box p {
@@ -72,17 +93,36 @@ header {
 
 .nav-logo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 75px;
+    padding-left: 18px;
+    width: 200px;
     height: 75px;
+    cursor: pointer;
 }
 
 .nav-logo img {
-    width: 60%;
+    /* width: 58%; */
     position: relative;
     display: block;
-    cursor: pointer;
+}
+
+.nav-container .nav-logo .white-small {
+    width: 18%;
+    display: block;
+}
+
+.nav-container .nav-logo .white-medium {
+    width: 63%;
+    opacity: 0;
+}
+
+.nav-checkbox:checked ~ .nav-container .white-small {
+    display: none;
+}
+
+.nav-checkbox:checked ~ .nav-container .white-medium {
+    opacity: 1;
 }
 
 nav p {
@@ -102,7 +142,7 @@ nav > div {
 }
 
 .nav-links {
-    height: 60%;
+    height: 50%;
 }
 
 .user-links {
@@ -120,6 +160,7 @@ nav > div {
     justify-content: flex-start;
     cursor: pointer;
     color: #dee7ef;
+    transition: opacity .3s ease-in-out;
 }
 
 .nav-box:hover {
