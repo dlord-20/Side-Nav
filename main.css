@@ -134,7 +134,7 @@ main {
 }
 
 .main-container {
-    padding-left: 75px;
+    padding: 20px 20px 20px 95px;
     width: 100%;
     transition: all 1s ease-in-out;
     box-sizing: border-box;
@@ -142,9 +142,5 @@ main {
 }
 
 .main-container.active {
-    padding-left: 200px;
-}
-
-h1 {
-    height: 1500px;
+    padding-left: 220px;
 }
