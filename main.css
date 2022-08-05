@@ -7,15 +7,20 @@
 
 .nav-checkbox, .nav-extend {
     position: absolute;
+    color: #dee7ef;
     top: 75px;
     width: 75px;
     height: 75px;
     z-index: 100;
     cursor: pointer;
+    margin-left: 0;
+    transition: all 1s ease-in-out;
 }
 
 .nav-checkbox {
     opacity: 0;
+    transition: all 1s ease-in-out;
+
 }
 
 .nav-extend {
@@ -25,15 +30,18 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    transition: all .5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .nav-checkbox:checked ~ .nav-container {
     width: 200px;
 }
 
-.nav-checkbox:checked ~ .nav-extend {
+.nav-checkbox:checked ~ .nav-extend,
+.nav-checkbox:checked
+{
     transform: rotate(180deg);
+    margin-left: 125px;
 }
 
 .nav-checkbox:checked ~ div .nav-box p {
@@ -45,7 +53,7 @@
     position: fixed;
     height: 100vh;
     width: 75px;
-    background-color: aqua;
+    background-image: linear-gradient(75deg, #2F434B, #071c23);
     transition: width 1s ease-in-out;
 }
 
@@ -65,7 +73,6 @@ nav p {
 nav > div {
     width: 200px;
     height: 75px;
-    background-color: bisque;
     overflow: hidden;
 
 }
@@ -82,7 +89,8 @@ nav > div {
     height: 150px;
 }
 
-.nav-links:hover .nav-box {
+.nav-links:hover .nav-box,
+.user-links:hover .nav-box {
     opacity: .5;
 }
 
@@ -91,6 +99,7 @@ nav > div {
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
+    color: #dee7ef;
 }
 
 .nav-box:hover {
