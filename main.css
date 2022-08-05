@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: raleway, sans-serif;
+
 }
 
 .nav-checkbox, .nav-extend {
@@ -9,6 +11,7 @@
     width: 75px;
     height: 75px;
     z-index: 100;
+    cursor: pointer;
 }
 
 .nav-checkbox {
@@ -22,6 +25,7 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    transition: all .5s ease-in-out;
 }
 
 .nav-checkbox:checked ~ .nav-container {
@@ -32,8 +36,9 @@
     transform: rotate(180deg);
 }
 
-.nav-checkbox:checked ~ div p {
+.nav-checkbox:checked ~ div .nav-box p {
     display: block;
+    opacity: 1;
 }
 
 .nav-container {
@@ -41,6 +46,7 @@
     height: 100vh;
     width: 75px;
     background-color: aqua;
+    transition: width 1s ease-in-out;
 }
 
 .nav-container nav {
@@ -48,18 +54,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
+    overflow: hidden;
 }
 
 nav p {
-    display: none;
+    opacity: 0;
 }
 
 
 nav > div {
-    width: 100%;
+    width: 200px;
     height: 75px;
     background-color: bisque;
+    overflow: hidden;
+
 }
 
 .nav-logo {
@@ -74,9 +82,24 @@ nav > div {
     height: 150px;
 }
 
+.nav-links:hover .nav-box {
+    opacity: .5;
+}
+
 .nav-box {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.nav-box:hover {
+    opacity: 1 !important;
+}
+
+.nav-box p {
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
 
 .nav-icon {
