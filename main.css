@@ -130,10 +130,14 @@ nav > div {
 }
 
 .main-container {
-    position: absolute;
-    margin-left: 75px;
-    /* width: 100%; */
-    border: 1px solid pink;
+    padding-left: 75px;
+    width: 100%;
+    border: 10px solid pink;
+    transition: padding-left 1s ease-in-out;
+}
+
+.main-container.active {
+    padding-left: 200px;
 }
 
 h1 {
