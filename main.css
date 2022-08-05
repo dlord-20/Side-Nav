@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-checkbox, .nav-extend {
+    position: absolute;
+    top: 75px;
+    width: 75px;
+    height: 75px;
+    z-index: 100;
+}
+
+.nav-checkbox {
+    opacity: 0;
+}
+
+.nav-extend {
+    pointer-events: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.nav-checkbox:checked ~ .nav-container {
+    width: 200px;
+}
+
+.nav-checkbox:checked ~ .nav-extend {
+    transform: rotate(180deg);
+}
+
+.nav-checkbox:checked ~ div p {
+    display: block;
+}
+
+.nav-container {
+    position: fixed;
+    height: 100vh;
+    width: 75px;
+    background-color: aqua;
+}
+
+.nav-container nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+nav p {
+    display: none;
+}
+
+
+nav > div {
+    width: 100%;
+    height: 75px;
+    background-color: bisque;
+}
+
+.nav-logo {
+    height: 75px;
+}
+
+.nav-links {
+    height: 60%;
+}
+
+.user-links {
+    height: 150px;
+}
+
+.nav-box {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+}
+
+.nav-box i {
+    font-size: 2rem;
+
+}
