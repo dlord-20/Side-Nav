@@ -228,42 +228,40 @@ nav > div {
     color: #dee7ef;
     transition: all .3s ease-in-out;
     cursor: pointer;
-    left: 65px;
+    left: 63px;
     top: 40px;
-    z-index: 1000000000;
 }
 
 /* Need to have the extends checked selector go here */
 
-.dark-mode-toggle p:nth-of-type(2) {
+.dark-mode-toggle .theme-dark {
+    opacity: 1;
+}
+
+.dark-mode-toggle .theme-light {
     opacity: 0;
 }
 
-.nav-theme:hover + p:nth-of-type(1),
-.nav-theme:hover:checked + p:nth-of-type(2)
+.nav-theme:hover ~ p:nth-of-type(1),
+.nav-theme:hover:checked ~ p:nth-of-type(2)
 {
     color:#071c23;
     background-color: #dee7ef;
     position: absolute;
-    overflow: auto;
-    /* width: 1000px; */
-    /* z-index: 100000; */
 }
 
-.nav-theme:checked + p:nth-of-type(1) {
+.nav-theme:checked ~ .theme-dark {
     opacity: 0;
 }
 
-.nav-theme:checked ~ p:nth-of-type(2) {
+.nav-theme:checked ~ .theme-light {
     opacity: 1;
 }
 
-/* .dark-mode-toggle p:nth-child(3):hover,
-.dark-mode-toggle p:last-child:hover
-{
+.nav-theme:hover:checked ~ p {
     color:#071c23;
     background-color: #dee7ef;
-} */
+}
 
 .nav-links:hover .nav-box,
 .user-links:hover .nav-box
