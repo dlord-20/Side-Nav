@@ -220,41 +220,41 @@ nav > div {
 }
 
 .dark-mode-toggle p {
-    color: green !important;
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     white-space: nowrap;
     padding: .4rem;
     border-radius: 5px;
     color: #dee7ef;
     transition: all .3s ease-in-out;
     cursor: pointer;
-    left: 45px;
-    top: 20px;
+    left: 65px;
+    top: 40px;
     z-index: 1000000000;
 }
 
-.dark-mode-toggle p:last-child {
+/* Need to have the extends checked selector go here */
+
+.dark-mode-toggle p:nth-of-type(2) {
     opacity: 0;
 }
 
-.nav-theme:hover ~ div p:nth-of-type(1),
-.nav-theme:hover:checked ~ div p:nth-of-type(2)
+.nav-theme:hover + p:nth-of-type(1),
+.nav-theme:hover:checked + p:nth-of-type(2)
 {
     color:#071c23;
     background-color: #dee7ef;
     position: absolute;
     overflow: auto;
-    width: 1000px;
-    z-index: 100000;
-    
+    /* width: 1000px; */
+    /* z-index: 100000; */
 }
 
-.nav-theme:checked ~ div p:nth-of-type(1) {
+.nav-theme:checked + p:nth-of-type(1) {
     opacity: 0;
 }
 
-.nav-theme:checked ~ div p:nth-of-type(2) {
+.nav-theme:checked ~ p:nth-of-type(2) {
     opacity: 1;
 }
 
@@ -266,13 +266,14 @@ nav > div {
 } */
 
 .nav-links:hover .nav-box,
-.user-links:hover .nav-box {
+.user-links:hover .nav-box
+{
     opacity: .5;
 }
 
 .nav-box {
     display: flex;
-    position: relative;
+    /* position: relative; */
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
@@ -325,7 +326,6 @@ main {
     width: 100%;
     transition: all 1s ease-in-out;
     box-sizing: border-box;
-    /* border: 5px solid pink; */
 }
 
 .main-container.active {
