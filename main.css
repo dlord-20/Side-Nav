@@ -175,22 +175,72 @@ nav > div {
 }
 
 .dark-mode-toggle {
-    height: 150px;
+    height: 110px;
     width: 75px;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     align-items: center;
+    color: green;
+    position: relative;
+}
+
+.nav-theme {
+    position: absolute;
+    cursor: pointer;
+    height: 90px;
+    width: 55px;
+    opacity: 0;
 }
 
 .outer-toggle {
+    display: flex;
+    justify-content: center;
     background-color: white;
-    height: 125px;
-    width: 45px;
+    height: 80px;
+    width: 40px;
+    border-radius: 50px;
 }
 
 .inner-toggle {
     background-color: #071c23;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    margin-top: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.nav-theme:checked ~ .outer-toggle .inner-toggle {
+    margin-top: 40px;
+}
+
+.dark-mode-toggle p {
+    position: absolute;
+    /* display: block; */
+    opacity: 1;
+    left: 68px;
+    /* border: 1px solid pink; */
+    white-space: nowrap;
+    padding: .4rem;
+    border-radius: 5px;
+    color: #dee7ef;
+    transition: all .3s ease-in-out;
+}
+
+.dark-mode-toggle p:nth-child(3) {
+    top: 15px;
+}
+
+.dark-mode-toggle p:last-child {
+    bottom: 15px;
+}
+
+.dark-mode-toggle p:nth-child(3):hover,
+.dark-mode-toggle p:last-child:hover
+{
+    color:#071c23;
+    background-color: #dee7ef;
 }
 
 .nav-links:hover .nav-box,
