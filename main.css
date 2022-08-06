@@ -177,11 +177,12 @@ nav > div {
 .dark-mode-toggle {
     height: 110px;
     width: 200px;
+    bottom: 150px;
     /* background-color: aqua; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
+    position: absolute;
 }
 
 .nav-theme {
@@ -196,7 +197,7 @@ nav > div {
 .outer-toggle {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background-color: white;
     height: 70px;
     width: 38px;
@@ -218,7 +219,8 @@ nav > div {
     margin-top: 31px;
 }
 
-.outer-toggle p {
+.dark-mode-toggle p {
+    color: green !important;
     position: absolute;
     opacity: 1;
     white-space: nowrap;
@@ -228,19 +230,12 @@ nav > div {
     transition: all .3s ease-in-out;
     cursor: pointer;
     left: 45px;
+    top: 20px;
+    z-index: 1000000000;
 }
 
 .dark-mode-toggle p:last-child {
     opacity: 0;
-}
-
-.dark-mode-toggle:hover p:nth-of-type(1) {
-    color:#071c23;
-    background-color: #dee7ef;
-    /* display: block; */
-    position: absolute;
-    z-index: 20000000;
-    overflow: auto;
 }
 
 .nav-theme:hover ~ div p:nth-of-type(1),
@@ -248,10 +243,11 @@ nav > div {
 {
     color:#071c23;
     background-color: #dee7ef;
-    display: block;
     position: absolute;
-    z-index: 20000000;
     overflow: auto;
+    width: 1000px;
+    z-index: 100000;
+    
 }
 
 .nav-theme:checked ~ div p:nth-of-type(1) {
@@ -276,6 +272,7 @@ nav > div {
 
 .nav-box {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
