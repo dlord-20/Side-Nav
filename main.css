@@ -171,7 +171,26 @@ nav > div {
 }
 
 .user-links {
+    height: fit-content;
+}
+
+.dark-mode-toggle {
     height: 150px;
+    width: 75px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-toggle {
+    background-color: white;
+    height: 125px;
+    width: 45px;
+}
+
+.inner-toggle {
+    background-color: #071c23;
 }
 
 .nav-links:hover .nav-box,
