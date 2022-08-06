@@ -176,12 +176,11 @@ nav > div {
 
 .dark-mode-toggle {
     height: 110px;
-    width: 75px;
+    width: 200px;
     /* background-color: aqua; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    color: green;
     position: relative;
 }
 
@@ -189,17 +188,21 @@ nav > div {
     position: absolute;
     cursor: pointer;
     height: 90px;
-    width: 55px;
+    width: 200px;
     opacity: 0;
+    z-index: 20;
 }
 
 .outer-toggle {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: white;
-    height: 80px;
-    width: 40px;
+    height: 70px;
+    width: 38px;
     border-radius: 50px;
+    margin-left: 20px;
+    position: absolute;
 }
 
 .inner-toggle {
@@ -212,36 +215,59 @@ nav > div {
 }
 
 .nav-theme:checked ~ .outer-toggle .inner-toggle {
-    margin-top: 40px;
+    margin-top: 31px;
 }
 
-.dark-mode-toggle p {
+.outer-toggle p {
     position: absolute;
-    /* display: block; */
     opacity: 1;
-    left: 68px;
-    /* border: 1px solid pink; */
     white-space: nowrap;
     padding: .4rem;
     border-radius: 5px;
     color: #dee7ef;
     transition: all .3s ease-in-out;
-}
-
-.dark-mode-toggle p:nth-child(3) {
-    top: 15px;
+    cursor: pointer;
+    left: 45px;
 }
 
 .dark-mode-toggle p:last-child {
-    bottom: 15px;
+    opacity: 0;
 }
 
-.dark-mode-toggle p:nth-child(3):hover,
+.dark-mode-toggle:hover p:nth-of-type(1) {
+    color:#071c23;
+    background-color: #dee7ef;
+    /* display: block; */
+    position: absolute;
+    z-index: 20000000;
+    overflow: auto;
+}
+
+.nav-theme:hover ~ div p:nth-of-type(1),
+.nav-theme:hover:checked ~ div p:nth-of-type(2)
+{
+    color:#071c23;
+    background-color: #dee7ef;
+    display: block;
+    position: absolute;
+    z-index: 20000000;
+    overflow: auto;
+}
+
+.nav-theme:checked ~ div p:nth-of-type(1) {
+    opacity: 0;
+}
+
+.nav-theme:checked ~ div p:nth-of-type(2) {
+    opacity: 1;
+}
+
+/* .dark-mode-toggle p:nth-child(3):hover,
 .dark-mode-toggle p:last-child:hover
 {
     color:#071c23;
     background-color: #dee7ef;
-}
+} */
 
 .nav-links:hover .nav-box,
 .user-links:hover .nav-box {
