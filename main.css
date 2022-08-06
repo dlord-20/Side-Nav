@@ -176,13 +176,21 @@ nav > div {
 
 .dark-mode-toggle {
     height: 110px;
-    width: 200px;
+    width: 75px;
     bottom: 150px;
-    /* background-color: aqua; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: absolute;
+    overflow: hidden;
+}
+
+.dark-mode-toggle:hover {
+    overflow: visible;
+}
+
+.nav-checkbox:checked ~ div .dark-mode-toggle {
+    width: 200px;
 }
 
 .nav-theme {
@@ -230,12 +238,29 @@ nav > div {
     cursor: pointer;
     left: 63px;
     top: 40px;
+    overflow: hidden;
 }
 
 /* Need to have the extends checked selector go here */
 
+.nav-checkbox ~ div .theme-dark
+{
+    opacity: 0;
+    transition: none;
+}
+
+/* .theme-light {
+    opacity: 0 !important;
+} */
+
+.nav-checkbox:checked ~ div .theme-dark {
+    opacity: 1;
+}
+
+
 .dark-mode-toggle .theme-dark {
     opacity: 1;
+    
 }
 
 .dark-mode-toggle .theme-light {
@@ -245,18 +270,26 @@ nav > div {
 .nav-theme:hover ~ p:nth-of-type(1),
 .nav-theme:hover:checked ~ p:nth-of-type(2)
 {
+    opacity: 1;
     color:#071c23;
     background-color: #dee7ef;
     position: absolute;
+    overflow: hidden;
+    
 }
 
 .nav-theme:checked ~ .theme-dark {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .nav-theme:checked ~ .theme-light {
-    opacity: 1;
+    opacity: 1 !important;
 }
+
+.nav-checkbox ~ .nav-container > nav > .user-links > .dark-mode-toggle > .theme-light {
+    opacity: 0;
+}
+
 
 .nav-theme:hover:checked ~ p {
     color:#071c23;
