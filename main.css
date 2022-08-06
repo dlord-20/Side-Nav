@@ -45,12 +45,37 @@ header {
     z-index: 5;
     opacity: 0;
     margin-top: 87.5px;
-    margin-left: 73px;
-    transition: all 1s ease-in-out;
+    margin-left: 67px;
+}
+
+.nav-checkbox:hover ~ .nav-extend p:first-child {
+    opacity: 1;
+    color: #071c23;
+    background-color: #dee7ef;
+    padding: .4rem;
+    border-radius: 5px;
+    margin-top: 82.5px;
+    transition: opacity .3s ease-in-out;
+
+}
+
+.nav-checkbox:checked ~ .nav-extend p:first-child {
+    opacity: 0 !important;
 }
 
 .nav-checkbox:checked ~ .nav-extend p {
     opacity: 1;
+}
+
+.nav-checkbox:hover ~ .nav-extend p {
+    background-color: #dee7ef;
+    padding: .4rem;
+    color: #071c23;
+    border-radius: 5px;
+    margin-top: 82px;
+    margin-left: 62px;
+    transition: opacity .3s ease-in-out;
+
 }
 
 .nav-checkbox:checked ~ .nav-container {
@@ -167,9 +192,23 @@ nav > div {
     opacity: 1 !important;
 }
 
+.nav-box:hover p {
+    opacity: 1;
+    background-color: #dee7ef;
+    display: block;
+    overflow: auto;
+    z-index: 100000;
+    position: absolute;
+    margin-left: 66px;
+    color: #071c23;
+    padding: .4rem;
+    border-radius: 5px;
+    transition: opacity .5s ease-in-out;
+}
+
 .nav-box p {
     opacity: 0;
-    transition: all 1s ease-in-out;
+    margin-left: -5px;
 }
 
 .nav-icon {
