@@ -210,8 +210,12 @@ nav > div {
     height: 70px;
     width: 38px;
     border-radius: 50px;
-    margin-left: 20px;
+    margin-left: 18px;
     position: absolute;
+}
+
+.outer-toggle.light {
+    background-color: #071c23;
 }
 
 .inner-toggle {
@@ -221,6 +225,10 @@ nav > div {
     border-radius: 25px;
     margin-top: 5px;
     transition: all .5s ease-in-out;
+}
+
+.inner-toggle.light {
+    background-color: #dee7ef;
 }
 
 .nav-theme:checked ~ .outer-toggle .inner-toggle {
