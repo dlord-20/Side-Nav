@@ -156,22 +156,41 @@ header {
     display: block;
 }
 
-.nav-container .nav-logo .white-small {
+.nav-container .nav-logo .white-small,
+.nav-container .nav-logo .color-small
+{
     width: 18%;
     display: block;
 }
 
-.nav-container .nav-logo .white-medium {
+.nav-container .nav-logo .white-medium,
+.nav-container .nav-logo .color-medium
+{
     width: 63%;
     opacity: 0;
 }
 
-.nav-checkbox:checked ~ .nav-container .white-small {
+.nav-checkbox:checked ~ .nav-container .white-small,
+.nav-checkbox ~ .nav-container .color-small,
+.nav-checkbox.light:checked ~ .nav-container .color-small
+{
     display: none;
 }
 
-.nav-checkbox:checked ~ .nav-container .white-medium {
+.nav-checkbox.light ~ .nav-container .color-small {
+    display: block;
+}
+
+.nav-checkbox:checked ~ .nav-container .white-medium,
+.nav-checkbox.light:checked ~ .nav-container .color-medium
+{
     opacity: 1;
+}
+
+.nav-checkbox.light ~ .nav-container .white-small,
+.nav-checkbox.light ~ .nav-container .white-medium
+{
+    display: none;
 }
 
 nav p {
