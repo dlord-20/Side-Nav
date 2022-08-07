@@ -24,6 +24,12 @@ header {
     transition: all 1s ease-in-out;
 }
 
+.nav-checkbox.light, 
+.nav-extend.light i
+{
+    color: #071c23;
+}
+
 .nav-checkbox {
     opacity: 0;
     transition: all 1s ease-in-out;
@@ -41,11 +47,15 @@ header {
 
 .nav-extend p {
     position: absolute;
-    color: white;
+    color: #dee7ef;
     z-index: 5;
     opacity: 0;
     margin-top: 87.5px;
     margin-left: 67px;
+}
+
+.nav-extend.light p {
+    color: #071c23;
 }
 
 .nav-checkbox:hover ~ .nav-extend p:first-child {
@@ -58,6 +68,12 @@ header {
     transition: opacity .3s ease-in-out;
 
 }
+
+.nav-checkbox.light:hover ~ .nav-extend.light p:first-child {
+    color: #dee7ef;
+    background-color: #071c23;
+}
+
 
 .nav-checkbox:checked ~ .nav-extend p:first-child {
     opacity: 0 !important;
@@ -75,7 +91,11 @@ header {
     margin-top: 82px;
     margin-left: 62px;
     transition: opacity .3s ease-in-out;
+}
 
+.nav-checkbox.light:hover ~ .nav-extend.light p {
+    background-color: #071c23;
+    color: #dee7ef;
 }
 
 .nav-checkbox:checked ~ .nav-container {
@@ -106,6 +126,10 @@ header {
     width: 75px;
     background-image: linear-gradient(75deg, #0d2e38, #071c23);
     transition: width 1s ease-in-out;
+}
+
+.nav-container.light {
+    background-image:  linear-gradient(75deg, #dee7ef, white);;
 }
 
 .nav-container nav {
@@ -212,10 +236,12 @@ nav > div {
     border-radius: 50px;
     margin-left: 18px;
     position: absolute;
+    transition: all .3s ease-in-out;
 }
 
 .outer-toggle.light {
     background-color: #071c23;
+    width: 40px;
 }
 
 .inner-toggle {
@@ -247,6 +273,10 @@ nav > div {
     left: 63px;
     top: 40px;
     overflow: hidden;
+}
+
+.dark-mode-toggle.light p {
+    color: #071c23;
 }
 
 /* Need to have the extends checked selector go here */
@@ -283,7 +313,12 @@ nav > div {
     background-color: #dee7ef;
     position: absolute;
     overflow: hidden;
-    
+}
+
+.nav-theme.light:hover ~ .theme-dark,
+.nav-theme.light:hover:checked ~ .theme-light {
+    color: #dee7ef;
+    background-color: #071c23;
 }
 
 .nav-theme:checked ~ .theme-dark {
@@ -324,6 +359,10 @@ nav > div {
     transition: opacity .3s ease-in-out;
 }
 
+.nav-box.light {
+    color: #071c23;
+}
+
 .nav-box:hover {
     opacity: 1 !important;
 }
@@ -340,6 +379,11 @@ nav > div {
     padding: .4rem;
     border-radius: 5px;
     transition: opacity .5s ease-in-out;
+}
+
+.nav-box.light:hover p {
+    background-color: #071c23;
+    color: #dee7ef;
 }
 
 .nav-box p {
