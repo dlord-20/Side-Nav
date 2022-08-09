@@ -126,10 +126,12 @@ header {
     width: 75px;
     background-image: linear-gradient(75deg, #0d2e38, #071c23);
     transition: width 1s ease-in-out;
+    border-right: 1px solid #dee7ef;
 }
 
 .nav-container.light {
-    background-image:  linear-gradient(75deg, #dee7ef, #dee7ef);;
+    background-image:  linear-gradient(75deg, #dee7ef, #dee7ef);
+    border-right: 1px solid #071c23;
 }
 
 .nav-container nav {
@@ -421,6 +423,8 @@ nav > div {
 
 }
 
+/* BODY ------ */
+
 main {
     width: 100%;
 }
@@ -430,6 +434,9 @@ main {
     width: 100%;
     transition: all 1s ease-in-out;
     box-sizing: border-box;
+    color: #dee7ef;
+    height: 100%;
+    background: #071c23;
 }
 
 .main-container.active {
