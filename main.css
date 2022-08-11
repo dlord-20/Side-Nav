@@ -442,3 +442,8 @@ main {
 .main-container.active {
     padding-left: 220px;
 }
+
+.icons-container {
+    background-color: #081c22;
+
+}
