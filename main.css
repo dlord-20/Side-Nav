@@ -443,6 +443,10 @@ main {
     padding-left: 220px;
 }
 
+.features-container {
+    background-color: aquamarine;
+}
+
 .icons-container {
     background-color: #081c22;
 
